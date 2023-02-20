@@ -1,0 +1,21 @@
+{
+  "name": "npm-practice",
+  "version": "1.0.0",
+  "description": "practicing npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashimkarki7/FulllstackUdemy2023/tree/master"
+  },
+  "keywords": [
+    "auto"
+  ],
+  "author": "ashim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
