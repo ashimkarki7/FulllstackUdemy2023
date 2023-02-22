@@ -1,0 +1,15 @@
+{
+  "name": "expresstesting",
+  "version": "1.0.0",
+  "description": "testingexpress",
+  "main": "app.js",
+  "scripts": {
+    "test": "testing"
+  },
+  "keywords": [
+    "express",
+    "learning"
+  ],
+  "author": "ashim karki",
+  "license": "ISC"
+}

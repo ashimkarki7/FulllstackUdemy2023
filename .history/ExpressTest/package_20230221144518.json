@@ -1,0 +1,19 @@
+{
+  "name": "expresstesting",
+  "version": "1.0.0",
+  "description": "testingexpress",
+  "main": "app.js",
+  "scripts": {
+    "test": "testing",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "expresstest",
+    "learning"
+  ],
+  "author": "ashim karki",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
