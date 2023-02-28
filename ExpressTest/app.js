@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
     // console.log('req1',req,'res1',res)
     res?.status(200)?.send('GET request to homepagessssssss ')
   })
-
+//this is placed at top has acess to upper get function else only has access to function below it and not the upper one 
   app.use((req,res,next)=>{ 
     console.log('reqmethod',req?.method,'requrl',res.url)
     // console.log('req',req,'res',res)
