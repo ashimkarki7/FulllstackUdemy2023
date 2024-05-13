@@ -1,0 +1,28 @@
+export type cssProps = {
+  color?: string;
+  fontSize?: string;
+  fontWeight?: string;
+  lineheight?: string;
+  textalign?: string;
+  fontFamily?: string;
+  display?: string;
+  flexdirection?: string;
+  alignitems?: string;
+  height?: string;
+  justifycontent?: string;
+  width?: string;
+  padding?: string;
+  gap?: string;
+  backgroundcolor?: string;
+  position?: string;
+  left?: string;
+  top?: string;
+  boxshadow?: string;
+  flexwrap?: string;
+  marginleft?: string;
+  flexgrow?: number;
+  zindex?: number;
+  bordertop?: string;
+  border?: string;
+  marginbottom?: string;
+};
