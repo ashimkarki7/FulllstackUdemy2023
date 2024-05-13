@@ -1,0 +1,21 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "full stack",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node Backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashimkarki7/FulllstackUdemy2023.git"
+  },
+  "author": "Ashim Karki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashimkarki7/FulllstackUdemy2023/issues"
+  },
+  "homepage": "https://github.com/ashimkarki7/FulllstackUdemy2023#readme"
+}
