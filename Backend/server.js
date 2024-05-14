@@ -14,6 +14,11 @@ const port = 5000;
      res.json(products);
  })
 
+app.get('/api/products/:id', (req,res)=>{
+    const responseToSend = products?.find((Productres)=> Productres?.id === req?.id)
+     res.json(responseToSend);
+ })
+
 
 //list on port above
 app.listen(port, ()=>console.log('running 600'))
