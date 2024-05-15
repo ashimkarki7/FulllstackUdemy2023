@@ -1,4 +1,4 @@
-# 🧑🏻‍💻 Angelswing Front-end Test
+# 🧑🏻‍💻 Proshop -e-commerce
 
 ## Install dependencies
 

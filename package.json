@@ -5,7 +5,10 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node Backend/server.js",
+    "server": "nodemon Backend/server.js",
+    "start": "node  Backend/server.js",
+    "client": "npm run dev --prefix FrontEnd",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +23,9 @@
   "homepage": "https://github.com/ashimkarki7/FulllstackUdemy2023#readme",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
   }
 }

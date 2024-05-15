@@ -2,3 +2,5 @@ Difference between package type :
 "type": "module", : import something , use es module
 or common js
 common js  : const js  require
+nodemon : to not run server again and again
+concurrenlty to run all the proces togetheer

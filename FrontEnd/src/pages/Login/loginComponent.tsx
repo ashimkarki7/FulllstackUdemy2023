@@ -56,7 +56,6 @@ const Login: React.FC = () => {
                                 name="exampleCheck1"
                                 type="checkbox"
                                 className="form-check-input"
-                                id="exampleCheck1"
                             />
                             <label className="form-check-label" htmlFor="exampleCheck1">
                                 Check me out
