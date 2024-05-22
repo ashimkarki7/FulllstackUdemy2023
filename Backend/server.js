@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 //esmodule so we have to use . / for your own module
 
 import products from "./data/products.js";
+import locations from "./data/location.js";
 dotenv.config();
 
 
@@ -16,6 +17,10 @@ const port = process.env.PORT || 5000;
 
  app.get('/api/products', (req,res)=>{
      res.json(products);
+ })
+
+app.get('/api/locations', (req,res)=>{
+     res.json(locations);
  })
 
 app.get('/api/products/:id', (req,res)=>{

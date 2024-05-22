@@ -2,6 +2,7 @@ import {configureStore} from "@reduxjs/toolkit";
 import {
     locationSlice
 } from '../pages/HomePage/slice.ts';
+import {productsSlice} from "../pages/Products/slice";
 
 
 
@@ -9,7 +10,8 @@ import {
 export  const store = configureStore(
     {
         reducer:{
-          locationData:  locationSlice.reducer
+          locationData:  locationSlice.reducer,
+            productData:  productsSlice.reducer
         }
     }
 )

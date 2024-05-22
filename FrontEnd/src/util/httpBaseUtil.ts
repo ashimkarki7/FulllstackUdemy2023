@@ -1,16 +1,20 @@
 import axios from 'axios';
 
 export const httpBase = () => {
-  const baseURL3001 = import.meta.env.VITE_APP_URL;
+  // const baseURL3001 = import.meta.env.VITE_APP_URL;
 
   const V2Headers = {
-    Accept: '**',
-    // 'Content-Type': 'text/plain',
-    // 'Access-Control-Allow-Origin': '*',
+    Accept: '*',
+    'Content-Type': 'text/plain',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers':"Origin, X-Requested-With, Content-Type, Accept",
   };
 
+  // response_object.header("Access-Control-Allow-Origin", "*");
+  // response_object.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
   const api = axios.create({
-    baseURL: `${baseURL3001}`,
+    // baseURL: `${baseURL3001}`,
     headers: { ...V2Headers },
     responseType: 'json',
   });
