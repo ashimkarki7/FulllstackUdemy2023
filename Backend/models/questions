@@ -1,0 +1,26 @@
+reviews is another schema
+ name :'string' or name :{ type:string , required:true}
+
+ ,
+
+  reviews:[reviewSchema], gonna be create after
+
+
+  every product should be connected or  related with user so user  as admin adds a product
+    user:{
+          type:mongoose.Schema.Types.ObjectId,
+            required:true,
+                  ref:"User"
+      },
+
+      everything create _id is mongoose id
+
+            ref:"User" where ,which collection is it coming from
+            reference
+
+
+            time stamp
+
+
+
+            script or file that imports all the user for us

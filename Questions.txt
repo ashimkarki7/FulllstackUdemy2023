@@ -23,3 +23,15 @@ Proxy Response: Vite receives the response from the Node.js server and forwards 
     or in package js in client looks product order in this domain in dev
 
     "proxy" : "http://localhost:5000 "
+
+    Understanding Proxy Options
+changeOrigin: true:
+
+This option changes the origin of the host header to the target URL.
+It's useful when the backend server expects requests to come from a specific origin.
+In some cases, it can cause issues if the backend server isn't set up to handle requests from different origins or if it's not necessary for your setup.
+rewrite:
+
+This option allows you to rewrite the URL path before forwarding the request to the target.
+It's useful when your backend API doesn’t use the same path structure as your front-end requests.
+If your API and front-end paths already match, this might not be needed and can cause issues if not set correctly.
