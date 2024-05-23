@@ -1,0 +1,37 @@
+Difference between package type :
+"type": "module", : import something , use es module
+or common js
+common js  : const js  require
+nodemon : to not run server again and again
+concurrenlty to run all the proces togetheer
+
+proxy to connect at this point either from vite : or from package in client
+How It Works
+Client Request: When the React app running on http://localhost:3000 makes a request to /api/data, Vite intercepts this request.
+Proxy Handling: Vite forwards the request to the Node.js server running on http://localhost:3001 due to the proxy configuration.
+Server Response: The Node.js server processes the request and sends the response back.
+Proxy Response: Vite receives the response from the Node.js server and forwards it back to the React app.
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+
+    or in package js in client looks product order in this domain in dev
+
+    "proxy" : "http://localhost:5000 "
+
+    Understanding Proxy Options
+changeOrigin: true:
+
+This option changes the origin of the host header to the target URL.
+It's useful when the backend server expects requests to come from a specific origin.
+In some cases, it can cause issues if the backend server isn't set up to handle requests from different origins or if it's not necessary for your setup.
+rewrite:
+
+This option allows you to rewrite the URL path before forwarding the request to the target.
+It's useful when your backend API doesn’t use the same path structure as your front-end requests.
+If your API and front-end paths already match, this might not be needed and can cause issues if not set correctly.

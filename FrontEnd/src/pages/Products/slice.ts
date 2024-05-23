@@ -7,17 +7,12 @@ const initialState: LocationState = {
   error: '',
   loading: true,
 };
-export const getLocations = createAsyncThunk('locationSlice/fetch', (_, { rejectWithValue }) => {
-  return v2Fetch(`/api/locations`)
+export const getProducts = createAsyncThunk('productsSlice/fetch', (_, { rejectWithValue }) => {
+  return v2Fetch(`/api/products`)
     .then((response: any) => {
       if (response.status === 200) {
         return Promise.resolve(
-          response?.data?.locations?.map((responseFromData: any) => {
-            return {
-              lat: responseFromData[0],
-              lng: responseFromData[1],
-            };
-          })
+          response?.data
         );
       }
     })
@@ -27,8 +22,8 @@ export const getLocations = createAsyncThunk('locationSlice/fetch', (_, { reject
     });
 });
 
-export const locationSlice = createSlice({
-  name: 'locationSlice',
+export const productsSlice = createSlice({
+  name: 'productsSlice',
   initialState,
   reducers: {
     cleanLocationData(state) {
@@ -38,17 +33,17 @@ export const locationSlice = createSlice({
     },
   },
   extraReducers: builder => {
-    builder.addCase(getLocations.pending, state => {
+    builder.addCase(getProducts.pending, state => {
       state.loading = true;
       state.error = '';
       state.payload = [];
     });
 
-    builder.addCase(getLocations.fulfilled, (state, action) => {
+    builder.addCase(getProducts.fulfilled, (state, action) => {
       state.loading = false;
       state.payload = action.payload;
     });
-    builder.addCase(getLocations.rejected, (state, action) => {
+    builder.addCase(getProducts.rejected, (state, action) => {
       state.loading = false;
       state.payload = [];
       state.error = action.payload?.toString();
@@ -57,4 +52,4 @@ export const locationSlice = createSlice({
 });
 
 
-export const {cleanLocationData} = locationSlice.actions;
+export const {cleanLocationData} = productsSlice.actions;

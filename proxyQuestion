@@ -1,0 +1,24 @@
+Understanding changeOrigin
+The changeOrigin option in the proxy configuration changes the origin of the host header to the target URL. This can be useful in scenarios where the backend server expects the requests to come from the target URL rather than the original URL of the client.
+
+When to Use changeOrigin
+Backend expects a specific host: If your backend server is configured to accept requests only from a specific host, using changeOrigin can help by making the request appear as if it's coming from the target host.
+Avoid CORS issues: Sometimes, changing the origin can help avoid CORS issues by making the request appear as if it's coming from the same origin as the backend server.
+Example
+Suppose your front-end is running on http://localhost:3000 and your backend API is running on http://localhost:3001. When changeOrigin is set to true, the origin of the request is changed from http://localhost:3000 to http://localhost:3001.
+
+
+target: Specifies the backend server to proxy to.
+changeOrigin: Changes the origin of the host header to the target URL.
+rewrite: Modifies the URL path before forwarding it to the target server.
+
+
+When changeOrigin Might Not Be Necessary
+If your backend server does not impose restrictions based on the origin of the requests, you might not need changeOrigin. This is often the case when:
+
+The backend server is configured to accept requests from any origin.
+The front-end and back-end are both running on localhost during development.
+Summary
+changeOrigin: true: This setting changes the origin of the request to match the target server. It's useful when the backend server expects requests to come from its own origin.
+rewrite Function: This modifies the request path to match the backend server's expected endpoints.
+By configuring these options correctly, you can ensure smooth communication between your front-end and back-end during development without running into CORS issues.
