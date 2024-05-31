@@ -22,5 +22,6 @@ reviews is another schema
             time stamp
 
 
-
+prepare sample data products in db  along with user product belong to user prepare our data and
+then well create seed or data seed a script or file we can run to import all our data into our app
             script or file that imports all the user for us
