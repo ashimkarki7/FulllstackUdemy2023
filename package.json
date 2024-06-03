@@ -7,6 +7,8 @@
   "scripts": {
     "server": "nodemon Backend/server.js",
     "start": "node  Backend/server.js",
+    "data:import": "node Backend/seeder.js",
+    "data:destroy": "node Backend/seeder.js -d",
     "client": "npm run dev --prefix FrontEnd",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,6 +24,8 @@
   },
   "homepage": "https://github.com/ashimkarki7/FulllstackUdemy2023#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "express": "^4.19.2",
     "mongoose": "^8.4.0"
   },
