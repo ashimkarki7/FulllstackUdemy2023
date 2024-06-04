@@ -1,0 +1,20 @@
+adding express route
+removed routing from
+
+app.get('/api/products', (req,res)=>{
+    res.json(products);
+})
+app.get('/api/products/:id', (req,res)=>{
+    const responseToSend = products?.find((Productres)=> Productres?.id === req?.id)
+    res.json(responseToSend);
+})
+
+to
+/ root
+and for id /:id
+
+by doing
+ app.use('/api/products',productRoutes); in server .js
+
+
+ use async handler as mongoose methods are asynchronous

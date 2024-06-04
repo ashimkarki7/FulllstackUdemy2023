@@ -2,9 +2,10 @@ import express from 'express';
 import dotenv from "dotenv";
 //esmodule so we have to use . / for your own module
 
-import products from "./data/products.js";
+
 import locations from "./data/location.js";
 import connectDB from "./config/db.js";
+import productRoutes from "./Routes/productRoute.js"
 dotenv.config();
 
 connectDB();
@@ -17,17 +18,12 @@ const port = process.env.PORT || 5000;
      res.send('API is running');
  });
 
- app.get('/api/products', (req,res)=>{
-     res.json(products);
- })
+
+ app.use('/api/products',productRoutes);
+
 
 app.get('/api/locations', (req,res)=>{
      res.json(locations);
- })
-
-app.get('/api/products/:id', (req,res)=>{
-    const responseToSend = products?.find((Productres)=> Productres?.id === req?.id)
-     res.json(responseToSend);
  })
 
 
