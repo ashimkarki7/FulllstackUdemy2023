@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import locations from "./data/location.js";
 import connectDB from "./config/db.js";
 import productRoutes from "./Routes/productRoute.js"
+import locationRouter from "./Routes/locations/locationRoute.js";
 dotenv.config();
 
 connectDB();
@@ -20,11 +21,12 @@ const port = process.env.PORT || 5000;
 
 
  app.use('/api/products',productRoutes);
+ app.use('/api/locations',locationRouter);
 
-
-app.get('/api/locations', (req,res)=>{
-     res.json(locations);
- })
+//
+// app.get('/api/locations', (req,res)=>{
+//      res.json(locations);
+//  })
 
 
 //list on port above

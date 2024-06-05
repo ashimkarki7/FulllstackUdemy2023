@@ -1,0 +1,1 @@
+import locationService from '../data/';

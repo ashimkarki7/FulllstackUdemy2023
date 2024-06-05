@@ -11,6 +11,7 @@ export const getLocations = createAsyncThunk('locationSlice/fetch', (_, { reject
   return v2Fetch(`/api/locations`)
     .then((response: any) => {
       if (response.status === 200) {
+        console.log('fff',  response?.data)
         return Promise.resolve(
           response?.data?.locations?.map((responseFromData: any) => {
             return {

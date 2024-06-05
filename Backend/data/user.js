@@ -13,7 +13,7 @@ const users = [{
     password:bcryptjs.hashSync('123456',10),
     isAdmin: true,
 },{ name:'Jane Doe',
-        email:'johnDoe@gmail.com',
+        email:'janeDoe@gmail.com',
         password:bcryptjs.hashSync('123456',10),
         isAdmin: false,
 

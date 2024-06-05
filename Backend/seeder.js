@@ -7,7 +7,8 @@ import User from "./models/userModel.js";
 import Product from "./models/productModel.js";
 import Order from "./models/orderModel.js";
 import connectDB from "./config/db.js";
-import user from "./data/user.js";
+import Location from "./models/locationModel/locationModel.js";
+import locations from "./data/location.js";
 
 
 
@@ -20,6 +21,7 @@ const importData = async ()=>{
       await Order?.deleteMany();
       await User?.deleteMany();
       await Product?.deleteMany();
+      await Location?.deleteMany();
 
       const createdUser = await User?.insertMany(users);
       const adminuser = await createdUser[0]._id;
@@ -29,8 +31,9 @@ const importData = async ()=>{
       });
 
       await Product.insertMany(sampleProducts);
+        await Location?.insertMany(locations);
 
-      console.log('fff')
+      console.log('fff',sampleProducts)
 
       process.exit();
     }
@@ -46,6 +49,7 @@ const destroyData = async ()=>{
         await Order?.deleteMany();
         await User?.deleteMany();
         await Product?.deleteMany();
+        await Location?.deleteMany();
         process.exit();
     }
     catch(err){
